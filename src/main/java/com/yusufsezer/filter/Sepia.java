@@ -1,7 +1,7 @@
 package com.yusufsezer.filter;
 
 import com.yusufsezer.contract.IFilter;
-import com.yusufsezer.util.ClampUtil;
+import com.yusufsezer.util.ClampUtils;
 import com.yusufsezer.util.ImageUtils;
 import java.awt.Color;
 import java.awt.Image;
@@ -28,9 +28,9 @@ public class Sepia implements IFilter {
                 int newGreen = (int) ((red * 0.349) + (green * 0.686) + (blue * 0.168));
                 int newBlue = (int) ((red * 0.272) + (green * 0.534) + (blue * 0.131));
 
-                newRed = ClampUtil.clampToByte(newRed);
-                newGreen = ClampUtil.clampToByte(newGreen);
-                newBlue = ClampUtil.clampToByte(newBlue);
+                newRed = ClampUtils.clampToByte(newRed);
+                newGreen = ClampUtils.clampToByte(newGreen);
+                newBlue = ClampUtils.clampToByte(newBlue);
 
                 Color newColor = new Color(newRed, newGreen, newBlue);
                 bufferedImage.setRGB(x, y, newColor.getRGB());

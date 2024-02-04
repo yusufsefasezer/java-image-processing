@@ -1,7 +1,7 @@
 package com.yusufsezer.filter;
 
 import com.yusufsezer.contract.IFilter;
-import com.yusufsezer.util.ClampUtil;
+import com.yusufsezer.util.ClampUtils;
 import com.yusufsezer.util.ImageUtils;
 import java.awt.Color;
 import java.awt.Image;
@@ -24,9 +24,9 @@ public class Noise implements IFilter {
                 int green = (color.getGreen() + random(0, 255)) / 2;
                 int blue = (color.getBlue() + random(0, 255)) / 2;
 
-                red = ClampUtil.clampToByte(red);
-                green = ClampUtil.clampToByte(green);
-                blue = ClampUtil.clampToByte(blue);
+                red = ClampUtils.clampToByte(red);
+                green = ClampUtils.clampToByte(green);
+                blue = ClampUtils.clampToByte(blue);
 
                 Color newColor = new Color(red, green, blue);
                 bufferedImage.setRGB(x, y, newColor.getRGB());

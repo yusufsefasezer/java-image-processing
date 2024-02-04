@@ -1,6 +1,6 @@
 package com.yusufsezer.util;
 
-public class ClampUtil {
+public class ClampUtils {
 
     public static int clamp(int value, int min, int max) {
         return Math.min(Math.max(value, min), max);
