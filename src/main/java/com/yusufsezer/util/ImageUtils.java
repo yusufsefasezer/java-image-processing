@@ -10,8 +10,8 @@ public class ImageUtils {
     public static BufferedImage toBufferedImage(Image image) {
         Objects.requireNonNull(image);
 
-        if (image instanceof BufferedImage) {
-            return (BufferedImage) image;
+        if (image instanceof BufferedImage bufferedImage) {
+            return bufferedImage;
         }
 
         int width = image.getWidth(null);
