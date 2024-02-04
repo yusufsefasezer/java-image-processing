@@ -1,8 +1,11 @@
 package com.yusufsezer;
 
+import com.yusufsezer.view.AppUI;
+
 public class App {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        AppUI ui = new AppUI();
+        ui.setVisible(true);
     }
 }
